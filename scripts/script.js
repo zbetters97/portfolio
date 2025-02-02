@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 
 function setActiveNav() {
-  const navAbout = document.getElementById("nav-about");
-  const navExperience = document.getElementById("nav-experience");
-  const navProjects = document.getElementById("nav-projects");
+  const navAbout = $("#nav-about");
+  const navExperience = $("#nav-experience");
+  const navProjects = $("#nav-projects");
 
-  const sectionAbout = document.getElementById("about");
-  const sectionExperience = document.getElementById("experience");
-  const sectionProject = document.getElementById("projects");
+  const sectionAbout = $("#about");
+  const sectionExperience = $("#experience");
+  const sectionProject = $("#projects");
 
   if (isOnScreen(sectionAbout)) {
     setActive(navAbout);
@@ -31,10 +31,12 @@ function setActiveNav() {
 
 function isOnScreen(element) {
   const rect = element.getBoundingClientRect();
+
   const viewHeight = Math.max(
     document.documentElement.clientHeight,
     window.innerHeight
   );
+
   return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
 }
 
