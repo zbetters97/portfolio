@@ -1,0 +1,8 @@
+$colorAccent: #5eead4;
+$colorHighlight: #e2e8f0;
+$backgroundAccent: rgba(45, 212, 191, 0.1);
+
+@mixin flexColumn() {
+  display: flex;
+  flex-direction: column;
+}
