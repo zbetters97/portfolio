@@ -1,18 +1,20 @@
 $(document).ready(function () {
-  setActiveNav();
-  $(window).scroll(function () {
-    setActiveNav();
-  });
+  loadPage();
 });
+
+function loadPage() {
+  setActiveNav();
+  $(window).scroll(() => setActiveNav());
+}
 
 function setActiveNav() {
   const navAbout = $("#nav-about");
   const navExperience = $("#nav-experience");
   const navProjects = $("#nav-projects");
 
-  const sectionAbout = $("#about");
-  const sectionExperience = $("#experience");
-  const sectionProject = $("#projects");
+  const sectionAbout = $("#about-section");
+  const sectionExperience = $("#experience-section");
+  const sectionProject = $("#projects-section");
 
   if (isOnScreen(sectionAbout)) {
     setActive(navAbout);
@@ -29,20 +31,21 @@ function setActiveNav() {
   }
 }
 
-function isOnScreen(element) {
-  const rect = element.getBoundingClientRect();
+function isOnScreen(section) {
+  const sectionTop = section.offset().top;
+  const sectionBottom = sectionTop + section.outerHeight();
 
-  const viewHeight = Math.max(
-    document.documentElement.clientHeight,
-    window.innerHeight
-  );
+  const viewportTop = $(window).scrollTop();
+  const viewportBottom = viewportTop + $(window).height();
 
-  return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+  const isOnScreen = sectionBottom > viewportTop && sectionTop < viewportBottom;
+
+  return isOnScreen;
 }
 
 function setActive(element) {
-  element.classList.add("current-section");
+  element.addClass("current-section");
 }
 function removeActive(element) {
-  element.classList.remove("current-section");
+  element.removeClass("current-section");
 }

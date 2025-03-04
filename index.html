@@ -21,7 +21,7 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="styles/css/styles.css" />
+    <link rel="stylesheet" href="styles/pages/css/index.css" />
 
     <script defer src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script defer type="text/javascript" src="scripts/script.js"></script>
@@ -29,20 +29,23 @@
   <body id="top-of-page">
     <div class="underlay"></div>
     <header>
-      <a href="https://github.com/zbetters97?tab=repositories" target="_blank">
-        <h1>Zachary Betters</h1>
+      <a
+        href="https://www.linkedin.com/in/zachary-betters-916a74116/"
+        target="_blank"
+      >
+        <h1 class="header-name light-text">Zachary Betters</h1>
       </a>
 
-      <h4>IT Specialist</h4>
-      <p>IT software and support specialist at GOLO LLC.</p>
-      <nav>
-        <a class="anchor-text" href="#about">
+      <h4 class="header-title light-text">IT Specialist</h4>
+      <p class="header-desc">IT software and support specialist at GOLO LLC.</p>
+      <nav class="navbar">
+        <a class="anchor-text nav-link" href="#about-section">
           <p id="nav-about">About</p>
         </a>
-        <a class="anchor-text" href="#experience">
+        <a class="anchor-text nav-link" href="#experience-section">
           <p id="nav-experience">Experience</p>
         </a>
-        <a class="anchor-text" href="#projects">
+        <a class="anchor-text nav-link" href="#projects-section">
           <p id="nav-projects">Projects</p>
         </a>
       </nav>
@@ -52,61 +55,67 @@
           href="https://github.com/zbetters97"
           target="_blank"
         >
-          <i class="fa-brands fa-github"></i>
+          <i class="social-icon fa-brands fa-github"></i>
         </a>
         <a
           class="social-link"
           href="https://www.linkedin.com/in/zachary-betters-916a74116/"
           target="_blank"
         >
-          <i class="fa-brands fa-linkedin"></i>
+          <i class="social-icon fa-brands fa-linkedin"></i>
         </a>
         <a
           class="social-link"
           href="https://x.com/every1_betters"
           target="_blank"
         >
-          <i class="fa-brands fa-x-twitter"></i>
+          <i class="social-icon fa-brands fa-x-twitter"></i>
         </a>
         <a
           class="social-link"
           href="https://www.instagram.com/zachcheddars/"
           target="_blank"
         >
-          <i class="fa-brands fa-instagram"></i>
+          <i class="social-icon fa-brands fa-instagram"></i>
         </a>
       </div>
     </header>
     <main>
-      <section id="about">
+      <section
+        class="home-section about-section"
+        id="about-section"
+        data-nav-link="nav-about"
+      >
         <div class="sticky-header">
-          <h2 class="light-text">About</h2>
+          <h2 class="light-text section-title">About</h2>
         </div>
-        <div class="about-contents">
-          <p>
-            Welcome to the official digital portfolio of Zachary Betters, where
-            I showcase a selection of my latest programming projects. Using
-            HTML, CSS, and JavaScript, this custom-built website highlights a
-            few key pieces that demonstrate my technical skills, problem-solving
-            abilities, and passion for clean, efficient code.
-          </p>
-        </div>
+        <p class="about-contents">
+          Welcome to the official digital portfolio of Zachary Betters, where I
+          showcase a selection of my latest programming projects. Using HTML,
+          SCSS, and jQuery, this custom-built website highlights a few key
+          pieces that demonstrate my technical skills, problem-solving
+          abilities, and passion for clean, efficient code.
+        </p>
       </section>
-      <section id="experience">
+      <section
+        class="home-section experience-section"
+        id="experience-section"
+        data-nav-link="nav-experience"
+      >
         <div class="sticky-header">
-          <h2 class="light-text">Experience</h2>
+          <h2 class="light-text section-title">Experience</h2>
         </div>
         <div class="experience-contents">
           <div class="experience-card">
             <p class="tenure">MAR 2022 - present</p>
             <div class="card-column">
               <a href="https://www.golo.com" target="_blank">
-                <h3 class="anchor-text card-header">
+                <h3 class="anchor-text experience-title">
                   IT Specialist · GOLO LLC.
                   <i class="fa-solid fa-arrow-right anchor-icon"></i>
                 </h3>
               </a>
-              <p>
+              <p class="experience-desc">
                 Assist with planning and executing large-scale projects,
                 deployments, and migrations. Configure and support various
                 applications, including Salesforce, AWS, Shopify, Excel, Azure,
@@ -118,18 +127,10 @@
               </p>
 
               <div class="tag-container">
-                <div class="tag">
-                  <p>O365 Admin</p>
-                </div>
-                <div class="tag">
-                  <p>Azure AD</p>
-                </div>
-                <div class="tag">
-                  <p>Shopify</p>
-                </div>
-                <div class="tag">
-                  <p>Salesforce</p>
-                </div>
+                <div class="tag"><p>O365 Admin</p></div>
+                <div class="tag"><p>Azure AD</p></div>
+                <div class="tag"><p>Shopify</p></div>
+                <div class="tag"><p>Salesforce</p></div>
               </div>
             </div>
           </div>
@@ -137,12 +138,12 @@
             <p class="tenure">MAY 2018 - MAR 2022</p>
             <div class="card-column">
               <a href="https://www.pbfenergy.com/refineries/" target="_blank">
-                <h3 class="anchor-text card-header">
+                <h3 class="anchor-text experience-title">
                   IT Desktop Support · Delaware City Refinery
                   <i class="fa-solid fa-arrow-right anchor-icon"></i>
                 </h3>
               </a>
-              <p>
+              <p class="experience-desc">
                 Managed the IT Help Desk by responding to software and
                 hardware-related issues, including Microsoft Access and Excel,
                 SAP, and in-house developed software. Developed and modified PDQ
@@ -150,32 +151,34 @@
               </p>
 
               <div class="tag-container">
-                <div class="tag">
-                  <p>Excel</p>
-                </div>
-                <div class="tag">
-                  <p>Access</p>
-                </div>
-                <div class="tag">
-                  <p>PDQ</p>
-                </div>
+                <div class="tag"><p>Excel</p></div>
+                <div class="tag"><p>Access</p></div>
+                <div class="tag"><p>PDQ</p></div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="projects">
+      <section
+        class="home-section projects-section"
+        id="projects-section"
+        data-nav-link="nav-projects"
+      >
         <div class="sticky-header">
-          <h2 class="light-text">Projects</h2>
+          <h2 class="light-text section-title">Projects</h2>
         </div>
         <div class="project-contents">
           <div class="project-card">
             <div class="project-img-container">
-              <img src="public/reach.png" alt="pokemon project" />
+              <img
+                class="project-img"
+                src="public/reach.png"
+                alt="pokemon project"
+              />
             </div>
             <div class="card-column">
               <a href="https://reachworshipde.netlify.app/" target="_blank">
-                <h3 class="anchor-text card-header">
+                <h3 class="anchor-text project-title">
                   Reach Worship Website
                   <i class="fa-solid fa-arrow-right anchor-icon"></i>
                 </h3>
@@ -188,35 +191,26 @@
                 Firebase.
               </p>
               <div class="tag-container">
-                <div class="tag">
-                  <p>HTML</p>
-                </div>
-                <div class="tag">
-                  <p>CSS</p>
-                </div>
-                <div class="tag">
-                  <p>JavaScript</p>
-                </div>
-                <div class="tag">
-                  <p>jQuery</p>
-                </div>
-                <div class="tag">
-                  <p>Google Maps</p>
-                </div>
-                <div class="tag">
-                  <p>Firebase</p>
-                </div>
+                <div class="tag"><p>HTML</p></div>
+                <div class="tag"><p>SCSS</p></div>
+                <div class="tag"><p>jQuery</p></div>
+                <div class="tag"><p>Google Maps</p></div>
+                <div class="tag"><p>Firebase</p></div>
               </div>
             </div>
           </div>
 
           <div class="project-card">
             <div class="project-img-container">
-              <img src="public/zelda.png" alt="zelda project" />
+              <img
+                class="project-img"
+                src="public/zelda.png"
+                alt="zelda project"
+              />
             </div>
             <div class="card-column">
               <a href="https://zbetters97.itch.io/zelda" target="_blank">
-                <h3 class="anchor-text card-header">
+                <h3 class="anchor-text project-title">
                   Action/Adventure Graphical 2D Video Game
                   <i class="fa-solid fa-arrow-right anchor-icon"></i>
                 </h3>
@@ -228,22 +222,22 @@
                 Nintendo.
               </p>
               <div class="tag-container">
-                <div class="tag">
-                  <p>Java</p>
-                </div>
-                <div class="tag">
-                  <p>IntelliJ</p>
-                </div>
+                <div class="tag"><p>Java</p></div>
+                <div class="tag"><p>IntelliJ</p></div>
               </div>
             </div>
           </div>
           <div class="project-card">
             <div class="project-img-container">
-              <img src="public/pokemon.png" alt="pokemon project" />
+              <img
+                class="project-img"
+                src="public/pokemon.png"
+                alt="pokemon project"
+              />
             </div>
             <div class="card-column">
               <a href="https://zbetters97.itch.io/pokemon" target="_blank">
-                <h3 class="anchor-text card-header">
+                <h3 class="anchor-text project-title">
                   Role-Playing Graphical 2D Video Game
                   <i class="fa-solid fa-arrow-right anchor-icon"></i>
                 </h3>
@@ -255,54 +249,55 @@
                 Freak.
               </p>
               <div class="tag-container">
-                <div class="tag">
-                  <p>Java</p>
-                </div>
-                <div class="tag">
-                  <p>IntelliJ</p>
-                </div>
+                <div class="tag"><p>Java</p></div>
+                <div class="tag"><p>IntelliJ</p></div>
               </div>
             </div>
           </div>
         </div>
         <a
+          class="projects-link"
           href="https://github.com/zbetters97?tab=repositories"
           target="_blank"
-          class="project-archive-link"
         >
           <p>
             View all Projects
-            <span class="right-arrow"
-              ><i class="fa-solid fa-arrow-right anchor-icon"></i
-            ></span>
+            <span class="right-arrow">
+              <i class="fa-solid fa-arrow-right anchor-icon"></i>
+            </span>
           </p>
         </a>
       </section>
     </main>
     <footer>
-      <p>
+      <p class="footer-info">
         Coded in
         <a
+          class="anchor-text"
           href="https://code.visualstudio.com"
           target="_blank"
-          class="anchor-text"
-          >Visual Studio Code</a
         >
+          Visual Studio Code
+        </a>
         by
         <a
           href="https://www.linkedin.com/in/zachary-betters-916a74116/"
           target="_blank"
           class="anchor-text"
-          >Zachary Betters</a
-        >.<br />
-        Built with HTML & CSS, and deployed with
-        <a href="https://www.netlify.com" target="_blank" class="anchor-text"
-          >Netlify</a
-        >.<br />
+        >
+          Zachary Betters
+        </a>
+        .<br />
+        Built with HTML & SCSS, and deployed with
+        <a href="https://www.netlify.com" target="_blank" class="anchor-text">
+          Netlify
+        </a>
+        .<br />
         All text is set in the
-        <a href="https://rsms.me/inter/" target="_blank" class="anchor-text"
-          >Inter typeface</a
-        >.
+        <a href="https://rsms.me/inter/" target="_blank" class="anchor-text">
+          Inter typeface
+        </a>
+        .
       </p>
       <a href="#top-of-page" class="scroll-to-top">
         <i class="fa-solid fa-arrow-up"></i>

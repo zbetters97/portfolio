@@ -1,0 +1,87 @@
+@use "../abstracts"as *;
+
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 10;
+}
+
+main {
+  @include flexbox(column, $gap: 6rem);
+}
+
+body {
+  color: $color-basic;
+  background-color: $color-bg;
+  padding: 4rem 2rem;
+  @include grid(initial, repeat(1, minmax(0, 1fr)), initial, 6em);
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.underlay {
+  position: fixed;
+  background: $color-bg-underlay;
+  inset: 0;
+  opacity: 0.15;
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection {
+  color: $color-bg;
+  background-color: $color-accent;
+}
+
+@media (min-width: 1024px) {
+
+  body {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 6rem;
+    padding-top: 0;
+  }
+
+  main {
+    padding-top: 6rem;
+    margin-right: auto;
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+.anchor-text {
+  color: $color-highlight;
+  text-decoration: none;
+  transition-duration: 200ms;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.anchor-icon {
+  padding-left: 0.5rem;
+}

@@ -1,0 +1,19 @@
+@use "../abstracts"as *;
+
+footer {
+  @include flexbox(column, space-between, flex-start, 2rem);
+
+  .footer-info {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    grid-column: span 2 / span 2;
+    flex-direction: row;
+  }
+}
